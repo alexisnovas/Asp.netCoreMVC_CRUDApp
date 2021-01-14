@@ -26,6 +26,7 @@ namespace Asp.netCoreMVC_CRUD
         {
             services.AddControllersWithViews();
 
+            //Este es el bind entre nuestro contexto y la conexión a base de datos.
             services.AddDbContext<SchoolContext>(options => 
             options.UseSqlServer(Configuration.GetConnectionString("DevConnection"))); //Le paso el connection string a través y agrego el acceso a la db a través de Dependency Injection.
         }
